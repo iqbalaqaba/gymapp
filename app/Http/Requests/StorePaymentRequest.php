@@ -23,7 +23,10 @@ class StorePaymentRequest extends FormRequest
     {
         return [
             //
+            'name' => 'required|string|max:255',
             'proof' => ['required', 'image', 'mimes:png,jpg,jpeg'],
+            'email' => 'required|email',
+            'phone' => 'required|string|max:15'
         ];
     }
 }

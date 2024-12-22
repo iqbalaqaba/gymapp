@@ -25,14 +25,28 @@ class BookingController extends Controller
     {
         $tax = 0.12;
         $totalTaxAmount = $tax * $subscribePackage->price;
-        $grandtotalAmount = $subscribePackage + $totalTaxAmount;
+        $grandTotalAmount = $subscribePackage->price + $totalTaxAmount;
+        // $validated['total_ammount'] = $grandTotalAmount;
 
-        return view('booking.checkout', compact('subscribePackage', 'totalTaxAmount', 'grandTotalAmount'));
+
+        // return view('booking.checkout', compact('subscribePackage', 'totalTaxAmount', 'grandTotalAmount'));
+        return view('booking.checkout', [
+            'subscribePackage' => $subscribePackage,
+            'totalTaxAmount' => $totalTaxAmount,
+            'grandTotalAmount' => $grandTotalAmount,
+        ]);
     }
 
     public function bookingStore(SubscribePackage $subscribePackage, StoreBookingRequest $request)
     {
         $validated = $request->validated();
+
+        $tax = 0.12;
+        $totalTaxAmount = $tax * $subscribePackage->price;
+        $grandTotalAmount = $subscribePackage->price + $totalTaxAmount;
+
+        $validated['total_ammount'] = $grandTotalAmount;
+
 
         try {
             $this->bookingService->storeBookingSession($subscribePackage, $validated);
@@ -46,8 +60,26 @@ class BookingController extends Controller
     public function payment()
     {
         $data = $this->bookingService->payment();
+        // dd($data);
         return view('booking.payment', $data);
     }
+
+    // public function paymentStore(StorePaymentRequest $request)
+    // {
+    //     $validated = $request->validated();
+
+    //     // Generate a transaction ID
+    //     $bookingTransactionid = $this->bookingService->paymentStore($validated);
+
+
+    //     if ($bookingTransactionid) {
+    //         // Redirect to the correct route
+    //         return redirect()->route('front.booking_finished', ['subscribeTransaction' => $bookingTransactionid]);
+    //     }
+
+    //     // Handle the fallback
+    //     return redirect()->route('front.index')->withErrors(['error' => 'Payment failed, please try again']);
+    // }
 
     public function paymentStore(StorePaymentRequest $request)
     {
@@ -56,7 +88,7 @@ class BookingController extends Controller
         $bookingTransactionid = $this->bookingService->paymentStore($validated);
 
         if ($bookingTransactionid) {
-            return redirect()->route('front.booking_finished', $bookingTransactionid);
+            return redirect()->route('front.booking_finished', ['subscribeTransaction' => $bookingTransactionid]);
         }
 
         return redirect()->route('front.index')->withErrors(['error' => 'Payment failed, please try again']);

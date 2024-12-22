@@ -47,4 +47,9 @@ class SubscribeTransaction extends Model
 
         return $randomString;
     }
+
+    public function getRouteKeyName()
+    {
+        return 'id'; // This matches the {subscribeTransaction:id} in your route
+    }
 }
