@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\PaymentController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -24,3 +25,9 @@ Route::post('/booking/{subscribePackage:id}', [BookingController::class, 'bookin
 
 // Route::get('/booking/finished/{subscribeTransaction:id}', [BookingController::class, 'bookingFinished'])->name('front.booking_finished');
 Route::get('/booking/finished/{subscribeTransaction:id}', [BookingController::class, 'bookingFinished'])->name('front.booking_finished');
+
+Route::view('/licenses', 'license-list')->name('licenses.list');
+Route::view('/payment', 'payment')->name('licenses.payment');
+
+
+Route::post('/process-payment', [PaymentController::class, 'processPayment'])->name('process.payment');
