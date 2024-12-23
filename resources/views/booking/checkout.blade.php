@@ -35,11 +35,11 @@ Checkout
         <div id="booking-items" class="flex flex-col w-full rounded-3xl p-8 gap-6 bg-white">
             <div class="flex flex-col gap-2">
                 <p class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Booking Details</p>
-                <p class="text-sm leading-16 tracking-03 opacity-60">Your next workout awaits, check booking details here</p>
+
             </div>
             <hr class="border-black opacity-10">
             <div class="items flex flex-nowrap gap-4 w-full">
-                <img src="{{asset('assets/images/icons/cart.svg')}}" class="w-10 h-10 flex shrink-0" alt="icon">
+                <img src="{{Storage::url($subscribePackage->icon)}}" class="w-10 h-10 flex shrink-0" alt="icon">
                 <div class="flex flex-col gap-2 w-full">
                     <div class="flex justify-between">
                         <p class="font-['ClashDisplay-SemiBold'] leading-19 tracking-05">{{ $subscribePackage->name}}</p>

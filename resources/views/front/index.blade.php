@@ -5,52 +5,42 @@
 
 @section('content')
 
-<header class="relative flex flex-col w-full h-[1044px] overflow-hidden -mb-[140px]">
-    <img src="{{asset('assets/images/backgrounds/Header Illustration.svg')}}" class="absolute w-full h-full object-cover" alt="backgrounds">
+  
    <x-nav/>
-    <div id="hero-text" class="relative flex flex-col items-center mx-auto mt-[96px]">
-        <div class="flex items-center w-fit rounded-[38px] p-2 pr-6 gap-3 bg-fitcamp-black">
-            <img src="{{asset('assets/images/photos/triple-photo.png')}}" class="flex shrink-0 w-[88px] h-10" alt="photos">
-            <p class="leading-19 text-white">Over <span class="font-semibold">100K+</span> Member Joined</p>
+    
+   <section class="bg-white">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-xl mx-auto px-6 py-12 items-center mt-10 mb-10">
+        <!-- Text Section -->
+        <div class="text-center md:text-left">
+            <h1 class="text-4xl font-extrabold tracking-tight leading-tight text-gray-900 md:text-5xl">
+                Gabung dan Mulai Perjalanan Fitness Anda!
+            </h1>
+            <p class="mt-4 text-lg font-normal text-gray-600 md:text-xl">
+                Daftar di gym favorit Anda dengan GymApp. Nikmati kemudahan akses ke jadwal kelas, pelatih, dan kemajuan fitness Anda langsung di tangan.
+            </p>
+            <div class="mt-4 flex items-center justify-center md:justify-start text-gray-500">
+                <span class="text-sm">
+                    ⭐ Lebih dari <strong>1,456</strong> ulasan | 💳 Tidak perlu kartu kredit
+                </span>
+            </div>
         </div>
-        <h1 class="font-['ClashDisplay-Bold'] text-[78px] text-white mt-4">Prioritize Your Health</h1>
-        <p class="leading-19 text-white">Transform Your Life by Investing in Your Wellness</p>
-        <form action="#" class="flex items-center w-[487px] rounded-[53px] p-2 pl-6 gap-6 bg-white mt-[38px]">
-            <input type="text" name="" id="" class="appearance-none outline-none !bg-white w-full leading-19 font-semibold placeholder:text-[#3F3F3F80]" placeholder="Search gym location, city nearby...">
-            <button type="submit" class="rounded-[48px] py-4 px-6 bg-fitcamp-black font-semibold leading-19 text-white">Search</button>
-        </form>
-    </div>
-</header>
-<section id="features" class="relative w-full max-w-[1280px] h-[280px] mx-auto px-10">
-    <div class="flex items-center justify-center w-full rounded-3xl p-10 gap-16 bg-white shadow-[8px_12px_28px_0_#0000000D]">
-        <div class="flex flex-col items-center w-[282px] gap-4 text-center">
-            <img src="{{asset('assets/images/icons/Located.svg')}}" class="w-[72px] h-[72px] flex shrink-0" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Find Nearby Location</h3>
-            <p class="tracking-03">Find the nearby gym that <br>
-                near your location to transform your <br>
-                healthy journey.</p>
-        </div>
-        <div class="flex flex-col items-center w-[282px] gap-4 text-center">
-            <img src="{{asset('assets/images/icons/coupon-dollar.svg')}}" class="w-[72px] h-[72px] flex shrink-0" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Become Membership</h3>
-            <p class="tracking-03">Access to all fitcamp gym <br>
-                and become part of our exclusive <br>
-                healty community. </p>
-        </div>
-        <div class="flex flex-col items-center w-[282px] gap-4 text-center">
-            <img src="{{asset('assets/images/icons/Muscle.svg')}}" class="w-[72px] h-[72px] flex shrink-0" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Maintain the Body</h3>
-            <p class="tracking-03">Ensure long-term wellness <br>
-                with effective healty body <br>
-                maintenance strategies</p>
+
+        <!-- Video or Image Section -->
+        <div class="flex justify-center">
+            <iframe class="rounded-lg shadow-md w-full md:w-3/4" height="300" 
+                src="https://www.youtube.com/embed/example_video" 
+                title="GymApp Promo Video" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
         </div>
     </div>
 </section>
-<section id="location" class="flex flex-col w-full max-w-[1280px] gap-8 mx-auto px-10 mt-[120px]">
+
+<section id="location" class="flex flex-col w-full max-w-[1280px] gap-8 mx-auto px-10 mt-5 mb-5">
     <div class="flex items-center justify-between">
         <div class="flex flex-col gap-4">
-            <h2 class="font-['ClashDisplay-SemiBold'] text-5xl leading-[59px] tracking-05">Gym Location</h2>
-            <p class="leading-19 tracking-03 opacity-60">Find the nearby gym that near your location to transform your healthy journey</p>
+            <h2 class="font-['ClashDisplay-SemiBold'] text-5xl leading-[59px] tracking-05">Lokasi gym</h2>
+            <p class="leading-19 tracking-03 opacity-60">Cari lokasi gym di kotamu!</p>
         </div>
     </div>
     <div class="flex items-center gap-4 flex-wrap">
@@ -70,15 +60,12 @@
         
     </div>
 </section>
-<section id="latest" class="flex flex-col w-full max-w-[1280px] gap-8 mx-auto px-10 mt-[120px]">
+<section id="latest" class="flex flex-col w-full max-w-[1280px] gap-8 mx-auto px-10 mt-10 mb-10">
     <div class="flex items-center justify-between">
         <div class="flex flex-col gap-4">
-            <h2 class="font-['ClashDisplay-SemiBold'] text-5xl leading-[59px] tracking-05">Latest Added</h2>
-            <p class="leading-19 tracking-03 opacity-60">New gyms added from around the city with variety facilities available</p>
+            <h2 class="font-['ClashDisplay-SemiBold'] text-5xl leading-[59px] tracking-05">Gym terbaru</h2>
+            <p class="leading-19 tracking-03 opacity-60">Gym terbaru yang tersedia</p>
         </div>
-        <a href="#" class="w-fit rounded-full py-4 px-6 bg-fitcamp-black text-white">
-            See All
-        </a>
     </div>
     <div class="grid grid-cols-3 gap-6">
 
@@ -122,7 +109,7 @@
                 </div>
                 <hr class="border-black/10">
                 <div class="flex items-center gap-3">
-                    <img src="{{asset('assets/images/icons/Daily Time.svg')}}" class="w-10 h-10" alt="icon">
+                    <img src="{{asset('assets/images/icons/clock.png')}}" class="w-10 h-10" alt="icon">
                     <div class="flex flex-col gap-2">
                         <p class="font-['ClashDisplay-SemiBold'] text-sm leading-17 tracking-05">Opening Work</p>
                         <p class="text-xs leading-14 tracking-05 opacity-50">{{$itemNewGym->open_time_at->format('h:i A')}} - {{$itemNewGym->closed_time_at->format('h:i A')}}</p>
@@ -136,181 +123,75 @@
          
     </div>
 </section>
-<section id="testi" class="flex flex-col gap-8 mt-[120px]">
-    <div class="flex items-center justify-between w-full max-w-[1280px] mx-auto px-10 ">
-        <div class="flex flex-col gap-4">
-            <h2 class="font-['ClashDisplay-SemiBold'] text-5xl leading-[59px] tracking-05">Joined  10.000+ User <br>with Happy Story</h2>
-        </div>
-        <a href="#" class="w-fit rounded-full py-4 px-6 bg-fitcamp-black text-white">
-            See All
-        </a>
-    </div>
-    <div class="swiper w-full">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide w-full">
-                <div class="flex flex-col items-center w-full max-w-[1069px] rounded-[32px] py-[56px] px-[72px] gap-12 mx-auto bg-white">
-                    <p class="text-[32px] tracking-05 text-center">
-                        I've been a member of this gym for six months, and it's <br>
-                        been a game-changer! The trainers are incredibly <br>
-                        knowledgeable and supportive
-                    </p>
-                    <div class="flex items-center gap-3 w-fit">
-                        <div class="w-16 h-16 rounded-full overflow-hidden">
-                            <img src="{{asset('assets/images/photos/image-1.png')}}" class="w-full h-full object-cover" alt="photos">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <p class="font-['ClashDisplay-SemiBold'] text-2xl leading-[29.52px] tracking-05">Tatang Sutarman</p>
-                            <p class="text-xl leading-6 tracking-05 opacity-50">Product Manager</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide w-full">
-                <div class="flex flex-col items-center w-full max-w-[1069px] rounded-[32px] py-[56px] px-[72px] gap-12 mx-auto bg-white">
-                    <p class="text-[32px] tracking-05 text-center">
-                        I've been a member of this gym for six months, and it's <br>
-                        been a game-changer! The trainers are incredibly <br>
-                        knowledgeable and supportive
-                    </p>
-                    <div class="flex items-center gap-3 w-fit">
-                        <div class="w-16 h-16 rounded-full overflow-hidden">
-                            <img src="{{asset('assets/images/photos/image-2.png')}}" class="w-full h-full object-cover" alt="photos">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <p class="font-['ClashDisplay-SemiBold'] text-2xl leading-[29.52px] tracking-05">Tatang Sutarman 2</p>
-                            <p class="text-xl leading-6 tracking-05 opacity-50">Product Manager</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide w-full">
-                <div class="flex flex-col items-center w-full max-w-[1069px] rounded-[32px] py-[56px] px-[72px] gap-12 mx-auto bg-white">
-                    <p class="text-[32px] tracking-05 text-center">
-                        I've been a member of this gym for six months, and it's <br>
-                        been a game-changer! The trainers are incredibly <br>
-                        knowledgeable and supportive
-                    </p>
-                    <div class="flex items-center gap-3 w-fit">
-                        <div class="w-16 h-16 rounded-full overflow-hidden">
-                            <img src="{{asset('assets/images/photos/image-3.png')}}" class="w-full h-full object-cover" alt="photos">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <p class="font-['ClashDisplay-SemiBold'] text-2xl leading-[29.52px] tracking-05">Tatang Sutarman 3</p>
-                            <p class="text-xl leading-6 tracking-05 opacity-50">Product Manager</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination !relative flex items-center justify-center gap-4 mt-[50px] h-[70px]"></div>
-    </div>
-</section>
-<section id="benefits" class="flex flex-col w-full max-w-[1280px] gap-8 mx-auto px-10 mt-[120px]">
-    <div class="flex items-center justify-between">
-        <div class="flex flex-col gap-4 text-center mx-auto">
-            <h2 class="font-['ClashDisplay-SemiBold'] text-5xl leading-[59px] tracking-05">Unlock All the Membership Benefits</h2>
-            <p class="leading-19 tracking-03 opacity-60">Experience full access to premium features, services, and facilities</p>
-        </div>
-    </div>
-    <div class="w-[1060px] mx-auto grid grid-cols-3 gap-20 mt-20">
-        <div class="flex flex-col items-center text-center gap-4">
-            <img src="{{asset('assets/images/icons/Flexible Time.svg')}}" class="w-[120px] h-[120px]" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Flexible Time</h3>
-            <p class="tracking-03">Your schedule, your workout. <br>
-                flexibility that fits your life, <br>
-                no time limits</p>
-        </div>
-        <div class="flex flex-col items-center text-center gap-4">
-            <img src="{{asset('assets/images/icons/Work From Anywhere.svg')}}" class="w-[120px] h-[120px]" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Workout  From Anywhere</h3>
-            <p class="tracking-03">Stay fit wherever you are. <br>
-                All locations, one membership, <br>
-                workout is just a click away</p>
-        </div>
-        <div class="flex flex-col items-center text-center gap-4">
-            <img src="{{asset('assets/images/icons/Expert Trainer.svg')}}" class="w-[120px] h-[120px]" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Expert Trainer</h3>
-            <p class="tracking-03">Unlock your potential with <br>
-                professional coaching, without  <br>
-                any additional charge</p>
-        </div>
-        <div class="flex flex-col items-center text-center gap-4">
-            <img src="{{asset('assets/images/icons/Schedule.svg')}}" class="w-[120px] h-[120px]" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Well Planned Schedule</h3>
-            <p class="tracking-03">Optimize monthly membership <br>
-                scheduling for consistent progress <br>
-                and results</p>
-        </div>
-        <div class="flex flex-col items-center text-center gap-4">
-            <img src="{{asset('assets/images/icons/Event.svg')}}" class="w-[120px] h-[120px]" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Fitness Event</h3>
-            <p class="tracking-03">Enjoy fitness event benefit, <br>
-                joined membership get variety  <br>
-                free class on every month</p>
-        </div>
-        <div class="flex flex-col items-center text-center gap-4">
-            <img src="{{asset('assets/images/icons/Enjoy.svg')}}" class="w-[120px] h-[120px]" alt="icon">
-            <h3 class="font-['ClashDisplay-SemiBold'] text-xl leading-6 tracking-05">Enjoy All Facilitiese</h3>
-            <p class="tracking-03">Experience fitness at It’s finest <br>
-                with our premium facilities. <br>
-                Train with the best</p>
-        </div>
-    </div>
-</section>
 
-<footer class="flex flex-col w-full max-w-[1312px] mx-auto rounded-[32px] bg-black p-[120px] mt-[120px] mb-16">
-    <div class="flex justify-between">
-        <div class="flex flex-col gap-6 max-w-[306px] text-start">
-            <img src="{{asset('assets/images/logos/Logo-2.svg')}}" class="h-12 w-fit" alt="icon">
-            <p class="tracking-03 text-white">Largest gym in Indonesia, top-tier facilities, premium amenities, and nationwide access to all gym location</p>
+
+<footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl">
+        <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+                <a href="#" class="flex items-center">
+                    <img src="{{asset('assets/images/logos/logo.svg')}}" class="mr-3 h-8" alt="FlowBite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Gymapp</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Menu</h2>
+                    <ul class="text-gray-600 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Lisensi</a>
+                        </li>
+                        <li>
+                            <a href="http://127.0.0.1:8000/admin/login" class="hover:underline">login Gymapp</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow kami</h2>
+                    <ul class="text-gray-600 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline ">Github</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <ul class="text-gray-600 dark:text-gray-400">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <nav class="flex gap-16 justify-end text-white">
-            <ul class="flex flex-col gap-4">
-                <p class="font-semibold tracking-03">More to Know</p>
-                <li>
-                    <a href="#" class="tracking-03">Blog</a>
-                </li>
-                <li>
-                    <a href="#" class="tracking-03">Subscription</a>
-                </li>
-                <li>
-                    <a href="#" class="tracking-03">Testimonial</a>
-                </li>
-                <li>
-                    <a href="#" class="tracking-03">About</a>
-                </li>
-            </ul>
-            <ul class="flex flex-col gap-4">
-                <p class="font-semibold tracking-03">Contact Us</p>
-                <li>
-                    <a href="#" class="tracking-03">021 543 545 676</a>
-                </li>
-                <li>
-                    <a href="#" class="tracking-03">@fitcamp.bodyfit</a>
-                </li>
-                <li>
-                    <a href="#" class="tracking-03">admin@fitcamp.com</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <hr class="border-white/50 mt-16">
-    <div class="flex items-center justify-between mt-[30px]">
-        <p class="font-semibold tracking-03 text-white">© 2024 fitcampcorporation</p>
-        <ul class="flex items-center justify-end gap-6 text-white">
-            <li>
-                <a href="#" class="tracking-03">Term of Services</a>
-            </li>
-            <li>
-                <a href="#" class="tracking-03">Privacy Policy</a>
-            </li>
-            <li>
-                <a href="#" class="tracking-03">Cookies</a>
-            </li>
-            <li>
-                <a href="#" class="tracking-03">Legal</a>
-            </li>
-        </ul>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline">Gymapp</a>. All Rights Reserved.
+            </span>
+            <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+        </div>
     </div>
 </footer>
     
@@ -322,5 +203,6 @@
 
 @push('after-scripts')
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script src="{{asset('js/index.js')}}"></script>
 @endpush
